@@ -1,9 +1,9 @@
 # 🌊 VibeWave Music - Official Website & APK
 
-The official landing page and download hub for **VibeWave Music** — a free, ad-free music streaming app for Android designed and developed by **Alok Kumar Kushwaha**.
+The official landing page and download hub for **VibeWave Music** — a free, ad-free music streaming app for Android designed and developed by **Alok Kushwaha**.
 
 ## 👨‍💻 Creator & Developer
-- **Author:** [Alok Kumar Kushwaha](https://github.com/AlokKumarKushwaha)
+- **Author:** [Alok Kushwaha](https://github.com/AlokKumarKushwaha)
 - **Role:** Lead Developer & Designer
 - **Project:** VibeWave Music Streaming Player (Android)
 
