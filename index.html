@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download VibeWave | Free Ad-Free Music for Android</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #764b82;
+      --primary-hover: #633c6e;
+      --primary-light: #f5eff8;
+      --text-dark: #1e1e24;
+      --text-muted: #6b6b7b;
+      --bg-cream: #faf8f5;
+      --card-border: #edeae4;
+      --accent-color: #764b82;
+      --accent-light: #f3ebf6;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-full: 9999px;
+      --shadow-soft: 0 16px 36px -10px rgba(0, 0, 0, 0.07), 0 4px 12px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 20px 45px -10px rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* Floating Pill Navbar */
+    .nav-wrapper {
+      position: fixed;
+      top: 24px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+      padding: 0 20px;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 720px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 8px 10px 8px 24px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+    }
+
+    .navbar:hover {
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 30px;
+      height: 30px;
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s ease;
+    }
+
+    .nav-btn {
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(118, 75, 130, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 20px 80px;
+      background: 
+        linear-gradient(to bottom, rgba(74, 144, 226, 0.15) 0%, rgba(255, 255, 255, 0) 40%, rgba(250, 248, 245, 0.9) 85%, #faf8f5 100%),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2232&auto=format&fit=crop') center bottom / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 840px;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffffff;
+      background: rgba(30, 30, 36, 0.45);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #ffffff;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title em {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: #ffffff;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+      font-weight: 500;
+      max-width: 580px;
+      margin: 0 auto 12px;
+    }
+
+    .hero-subtext {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+      font-weight: 500;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Download Section Grid */
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+
+    @media (max-width: 880px) {
+      .download-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+    }
+
+    /* Interactive Island Card (Left) */
+    .interactive-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      padding: 36px 30px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .view-container {
+      width: 100%;
+      height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* 3D Isometric Sakura Tree SVG */
+    .tree-display {
+      transition: opacity 0.3s ease, transform 0.4s ease;
+    }
+
+    .qr-display {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .qr-box {
+      background: #fff;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--card-border);
+    }
+
+    .qr-box img, .qr-box svg {
+      display: block;
+      width: 180px;
+      height: 180px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Controls Panel */
+    .interactive-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .pill-btn {
+      background: var(--bg-cream);
+      border: 1px solid var(--card-border);
+      color: var(--text-dark);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .pill-btn:hover {
+      background: #eeebe3;
+      transform: translateY(-1px);
+    }
+
+    .pill-btn.active {
+      background: var(--accent-light);
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    /* Color Palette Circles */
+    .color-swatches {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .color-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 2px solid transparent;
+    }
+
+    .color-circle:hover {
+      transform: scale(1.2);
+    }
+
+    .color-circle.selected {
+      transform: scale(1.25);
+      border-color: #fff;
+      box-shadow: 0 0 0 2px var(--text-dark);
+    }
+
+    /* Download Card (Right) */
+    .download-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      padding: 40px 32px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-light);
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .card-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .card-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+
+    .field-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* Custom Build Selector */
+    .select-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .build-select-btn {
+      width: 100%;
+      background: var(--bg-cream);
+      border: 1.5px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+
+    .build-select-btn:hover {
+      border-color: #cfcac0;
+      background: #f5f2ec;
+    }
+
+    .build-select-btn .build-info strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+
+    .build-select-btn .build-info span {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .select-arrow {
+      transition: transform 0.25s ease;
+      color: var(--text-muted);
+    }
+
+    .build-options-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+      z-index: 50;
+      overflow: hidden;
+      animation: menuSlide 0.2s ease;
+    }
+
+    @keyframes menuSlide {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .build-option {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      border-bottom: 1px solid #f6f4ee;
+    }
+
+    .build-option:last-child {
+      border-bottom: none;
+    }
+
+    .build-option:hover {
+      background: var(--bg-cream);
+    }
+
+    .build-option.active {
+      background: var(--accent-light);
+    }
+
+    .build-option strong {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    .build-option span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .check-icon {
+      color: var(--accent-color);
+      display: none;
+    }
+
+    .build-option.active .check-icon {
+      display: block;
+    }
+
+    /* Main Download CTA Button */
+    .download-cta-btn {
+      width: 100%;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(118, 75, 130, 0.28);
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-cta-btn:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(118, 75, 130, 0.36);
+    }
+
+    .download-cta-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Collapsible Verify */
+    .verify-toggle {
+      margin-top: 24px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.2s ease;
+    }
+
+    .verify-toggle:hover {
+      color: var(--text-dark);
+    }
+
+    .verify-details {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      background: var(--bg-cream);
+      border-radius: 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      border: 1px solid var(--card-border);
+      word-break: break-all;
+    }
+
+    /* Steps Section */
+    .steps-section {
+      margin-top: 80px;
+      padding-top: 60px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .steps-header {
+      margin-bottom: 40px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 860px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .step-card.card-purple {
+      background: #e8e3f5;
+    }
+
+    .step-card.card-mint {
+      background: #ddf3ea;
+    }
+
+    .step-card.card-peach {
+      background: #fde2d1;
+    }
+
+    .step-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(30, 30, 36, 0.65);
+      margin-bottom: 24px;
+    }
+
+    .step-card h3 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .step-card p {
+      font-size: 0.95rem;
+      color: rgba(30, 30, 36, 0.75);
+      line-height: 1.55;
+    }
+
+    .help-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: gap 0.2s ease, color 0.2s ease;
+    }
+
+    .help-link:hover {
+      gap: 10px;
+      color: var(--accent-color);
+    }
+
+    /* FAQ Drawer */
+    .faq-drawer {
+      display: none;
+      margin-top: 24px;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .faq-item {
+      margin-bottom: 16px;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--card-border);
+      padding: 60px 24px 40px;
+      margin-top: 100px;
+    }
+
+    .footer-content {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-tagline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Animated Sound Waveform */
+    .sound-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 16px;
+    }
+
+    .sound-bar {
+      width: 3px;
+      background: var(--accent-color);
+      border-radius: 2px;
+      animation: soundWave 1.2s infinite ease-in-out;
+    }
+
+    .sound-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+    .sound-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
+    .sound-bar:nth-child(3) { height: 9px; animation-delay: 0.2s; }
+    .sound-bar:nth-child(4) { height: 16px; animation-delay: 0.4s; }
+    .sound-bar:nth-child(5) { height: 8px; animation-delay: 0.15s; }
+
+    @keyframes soundWave {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 24px;
+      border-top: 1px solid #f0ede6;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #1e1e24;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Pill Navbar -->
+  <header class="nav-wrapper">
+    <nav class="navbar">
+      <a href="#" class="brand">
+        <!-- VibeWave Sound Waveform Logo -->
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3" fill="currentColor"></circle>
+          <circle cx="18" cy="16" r="3" fill="currentColor"></circle>
+        </svg>
+        <span>vibewave</span>
+      </a>
+      <a href="#download-box" class="nav-btn">Download VibeWave</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">VIBEWAVE FOR ANDROID</div>
+      <h1 class="hero-title">Good music.<br><em>Great company.</em></h1>
+      <p class="hero-desc">Take your music with you. Find your next favorite on VibeWave.</p>
+      <p class="hero-subtext">Free to download. Made for Android.</p>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container" id="download-box">
+    
+    <!-- Download Section (Two Column Grid) -->
+    <div class="download-grid">
+      
+      <!-- Left Column: Interactive Tree & QR Code -->
+      <div class="left-col">
+        <p class="section-eyebrow">FROM HERE TO YOUR PHONE</p>
+        <h2 class="section-title">Take VibeWave with you.</h2>
+        <p class="section-desc">Scan the code to open this page on your phone, or download directly.</p>
+
+        <div class="interactive-card">
+          <div class="view-container">
+            <!-- 3D Isometric Tree SVG Display -->
+            <div class="tree-display" id="treeView">
+              <svg width="240" height="230" viewBox="0 0 240 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Isometric Ground Base -->
+                <polygon points="120,205 210,160 120,115 30,160" fill="#a5c492" />
+                <polygon points="30,160 120,205 120,220 30,175" fill="#7d9b6c" />
+                <polygon points="120,205 210,160 210,175 120,220" fill="#69855b" />
+                
+                <!-- Stone Pathway tiles -->
+                <polygon points="120,175 135,167 120,160 105,167" fill="#dfded8" />
+                <polygon points="135,167 150,160 135,152 120,160" fill="#cbcac2" />
+                <polygon points="105,167 120,160 105,152 90,160" fill="#cbcac2" />
+                <polygon points="120,190 135,182 120,175 105,182" fill="#dfded8" />
+
+                <!-- Tree Trunk -->
+                <path d="M115,162 L125,162 L123,105 L117,105 Z" fill="#75503b" />
+                <path d="M123,115 L140,95 L136,92 L122,110 Z" fill="#5a3d2c" />
+                <path d="M117,120 L98,102 L102,99 L118,115 Z" fill="#5a3d2c" />
+
+                <!-- Foliage (Season reactive: id treeFoliage) -->
+                <g id="treeFoliage">
+                  <!-- Pink Spring Sakura Leaves -->
+                  <circle cx="120" cy="75" r="42" fill="#f8b4cb" opacity="0.95" />
+                  <circle cx="95" cy="85" r="30" fill="#f69ab8" opacity="0.9" />
+                  <circle cx="145" cy="85" r="32" fill="#fca1bf" opacity="0.9" />
+                  <circle cx="120" cy="50" r="28" fill="#fed0df" opacity="0.95" />
+                  
+                  <!-- Soft Petal Details -->
+                  <circle cx="108" cy="68" r="6" fill="#fff" opacity="0.6" />
+                  <circle cx="132" cy="78" r="5" fill="#fff" opacity="0.6" />
+                  <circle cx="124" cy="92" r="7" fill="#f38ba9" opacity="0.7" />
+                  
+                  <!-- Ground Fallen Petals -->
+                  <ellipse cx="142" cy="170" rx="4" ry="2" fill="#f69ab8" />
+                  <ellipse cx="98" cy="172" rx="3" ry="1.5" fill="#f69ab8" />
+                  <ellipse cx="120" cy="195" rx="5" ry="2" fill="#f8b4cb" />
+                  <ellipse cx="160" cy="162" rx="4" ry="2" fill="#fca1bf" />
+                </g>
+              </svg>
+            </div>
+
+            <!-- QR Code Display -->
+            <div class="qr-display" id="qrView">
+              <div class="qr-box">
+                <img id="qrImg" src="qr-code.svg" alt="Scan QR Code to download VibeWave" width="180" height="180" style="display:block; border-radius: 8px; width: 180px; height: 180px;" />
+              </div>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 12px; font-weight: 500; text-align: center; max-width: 200px;">
+                📷 Scan with phone camera to open download page
+              </p>
+            </div>
+          </div>
+
+          <!-- Controls under tree -->
+          <div class="interactive-controls">
+            <button class="pill-btn active" id="btnSpring" onclick="setSeason('spring')">🌸 Spring</button>
+            <button class="pill-btn" id="btnSummer" onclick="setSeason('summer')">☀️ Summer</button>
+            <button class="pill-btn" id="btnAutumn" onclick="setSeason('autumn')">🍂 Autumn</button>
+            <button class="pill-btn" id="btnToggleQR" onclick="toggleQrView()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span id="qrBtnText">Show QR code</span>
+            </button>
+            <button class="pill-btn" onclick="copyShareLink()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              Copy link
+            </button>
+          </div>
+
+          <!-- Color theme swatches -->
+          <div class="color-swatches">
+            <div class="color-circle selected" style="background: #764b82;" onclick="setThemeColor('#764b82', this)"></div>
+            <div class="color-circle" style="background: #9055a2;" onclick="setThemeColor('#9055a2', this)"></div>
+            <div class="color-circle" style="background: #d84a58;" onclick="setThemeColor('#d84a58', this)"></div>
+            <div class="color-circle" style="background: #e38d2c;" onclick="setThemeColor('#e38d2c', this)"></div>
+            <div class="color-circle" style="background: #2f80ed;" onclick="setThemeColor('#2f80ed', this)"></div>
+            <div class="color-circle" style="background: #7395ae;" onclick="setThemeColor('#7395ae', this)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Download Card -->
+      <div class="right-col">
+        <div class="download-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3" fill="currentColor"></circle>
+              <circle cx="18" cy="16" r="3" fill="currentColor"></circle>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Make it yours.</h3>
+          <p class="card-subtitle">Download VibeWave for your Android phone.</p>
+
+          <label class="field-label">Choose your phone's build</label>
+          
+          <!-- Custom Build Dropdown -->
+          <div class="select-wrapper">
+            <div class="build-select-btn" id="buildDropdownBtn" onclick="toggleBuildMenu()">
+              <div class="build-info">
+                <strong id="selectedBuildTitle">Standard</strong>
+                <span id="selectedBuildSub">ARM64 · most Android phones</span>
+              </div>
+              <svg class="select-arrow" id="dropdownArrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+
+            <div class="build-options-menu" id="buildMenu">
+              <div class="build-option active" onclick="selectBuild('standard', 'Standard', 'ARM64 · most Android phones', 'downloads/VibeWave-standard.apk')">
+                <div>
+                  <strong>Standard</strong>
+                  <span>ARM64 · most Android phones</span>
+                </div>
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+
+              <div class="build-option" onclick="selectBuild('armv7', 'Older phones', 'ARMv7 · 32-bit Android', 'downloads/VibeWave-armv7.apk')">
+                <div>
+                  <strong>Older phones</strong>
+                  <span>ARMv7 · 32-bit Android</span>
+                </div>
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+
+              <div class="build-option" onclick="selectBuild('vivo', 'Vivo / iQOO', 'ARM64 · OriginOS compatibility', 'downloads/VibeWave-vivo.apk')">
+                <div>
+                  <strong>Vivo / iQOO</strong>
+                  <span>ARM64 · OriginOS compatibility</span>
+                </div>
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download Button -->
+          <a href="downloads/VibeWave-standard.apk" download id="downloadLink" class="download-cta-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span id="downloadBtnText">Download VibeWave</span>
+          </a>
+
+          <!-- Verify Accordion -->
+          <button class="verify-toggle" onclick="toggleVerify()">
+            <span id="verifyArrow">▶</span> Verify your download
+          </button>
+          
+          <div class="verify-details" id="verifyDetails">
+            <p><strong>Package Name:</strong> com.vibewave.music</p>
+            <p><strong>Min Android Version:</strong> Android 8.0 (API 26)+</p>
+            <p><strong>Size:</strong> ~25.7 MB</p>
+            <p><strong>SHA-256 Checksum:</strong></p>
+            <code style="display:block; background:#fff; padding:6px; border-radius:6px; margin-top:4px; font-size:0.75rem; color:#444;">e9f4c803a6493dc2a452d9b626e3bc01fe35882e3c0f456cbb8a25c110609341</code>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Step by Step Guide Section -->
+    <section class="steps-section">
+      <div class="steps-header">
+        <p class="section-eyebrow">READY, SET, LISTEN</p>
+        <h2 class="section-title">A few steps to <em>your first listen.</em></h2>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card card-purple">
+          <span class="step-number">01</span>
+          <h3>Get the app</h3>
+          <p>Choose the build for your phone. ARM64 works with most modern Android devices. For Vivo/iQOO devices, choose the Vivo build.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card card-mint">
+          <span class="step-number">02</span>
+          <h3>Open your download</h3>
+          <p>Find the APK in your browser's downloads. If prompted, allow that browser or file manager to install unknown apps.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card card-peach">
+          <span class="step-number">03</span>
+          <h3>Make yourself at home</h3>
+          <p>Open VibeWave, search your favorite songs, stream in 320kbps high quality with synchronized lyrics, and enjoy without ads.</p>
+        </div>
+      </div>
+
+      <!-- Help Link -->
+      <a class="help-link" onclick="toggleFaq()">
+        Need a little help? <span>→</span>
+      </a>
+
+      <!-- FAQ Drawer -->
+      <div class="faq-drawer" id="faqDrawer">
+        <div class="faq-item">
+          <strong>How do I install the APK file on Android?</strong>
+          <p>Once downloaded, tap on the notification or open your phone's 'Downloads' folder. Tap the APK file and select 'Install'. If your phone asks for permission to install unknown apps, tap 'Settings' and enable 'Allow from this source'.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Is VibeWave free and ad-free?</strong>
+          <p>Yes, 100% free and open-source without third-party advertisements or audio interruptions.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Which build should I select?</strong>
+          <p>Select 'Standard' for Samsung, Pixel, OnePlus, Xiaomi, Realme, Motorola, etc. Select 'Vivo / iQOO' if you have a Vivo/iQOO phone running OriginOS / FuntouchOS to get dynamic island music widget support.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-left">
+          <a href="#" class="brand">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+              <path d="M9 18V5l12-2v13"></path>
+              <circle cx="6" cy="18" r="3" fill="currentColor"></circle>
+              <circle cx="18" cy="16" r="3" fill="currentColor"></circle>
+            </svg>
+            <span>vibewave</span>
+          </a>
+          <div class="footer-tagline">
+            <span>Music, made yours.</span>
+            <div class="sound-bars">
+              <div class="sound-bar"></div>
+              <div class="sound-bar"></div>
+              <div class="sound-bar"></div>
+              <div class="sound-bar"></div>
+              <div class="sound-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="#download-box">Download VibeWave</a></li>
+          <li><a href="#" onclick="toggleFaq(); return false;">Support</a></li>
+          <li><a href="#download-box">What's new</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 VibeWave</span>
+        <span>Made with care for music lovers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#68d391" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastMsg">Link copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Build Selection
+    let currentDownloadUrl = "downloads/VibeWave-standard.apk";
+
+    function toggleBuildMenu() {
+      const menu = document.getElementById("buildMenu");
+      const arrow = document.getElementById("dropdownArrow");
+      const isOpen = menu.style.display === "block";
+      menu.style.display = isOpen ? "none" : "block";
+      arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+    }
+
+    function selectBuild(type, title, subtitle, url) {
+      document.getElementById("selectedBuildTitle").textContent = title;
+      document.getElementById("selectedBuildSub").textContent = subtitle;
+      document.getElementById("downloadLink").href = url;
+      currentDownloadUrl = url;
+
+      // Update active option styling
+      const options = document.querySelectorAll(".build-option");
+      options.forEach(opt => opt.classList.remove("active"));
+      event.currentTarget.classList.add("active");
+
+      toggleBuildMenu();
+      showToast("Selected " + title + " build");
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function(e) {
+      const wrapper = document.querySelector(".select-wrapper");
+      if (wrapper && !wrapper.contains(e.target)) {
+        document.getElementById("buildMenu").style.display = "none";
+        document.getElementById("dropdownArrow").style.transform = "rotate(0deg)";
+      }
+    });
+
+    // Verify Collapsible
+    function toggleVerify() {
+      const details = document.getElementById("verifyDetails");
+      const arrow = document.getElementById("verifyArrow");
+      const isVisible = details.style.display === "block";
+      details.style.display = isVisible ? "none" : "block";
+      arrow.textContent = isVisible ? "▶" : "▼";
+    }
+
+    // Help / FAQ Drawer
+    function toggleFaq() {
+      const faq = document.getElementById("faqDrawer");
+      faq.style.display = faq.style.display === "block" ? "none" : "block";
+      if (faq.style.display === "block") {
+        faq.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    // Toggle QR Code vs 3D Tree
+    let isQrShowing = false;
+    function toggleQrView() {
+      isQrShowing = !isQrShowing;
+      const tree = document.getElementById("treeView");
+      const qr = document.getElementById("qrView");
+      const btnText = document.getElementById("qrBtnText");
+
+      if (isQrShowing) {
+        tree.style.display = "none";
+        qr.style.display = "flex";
+        btnText.textContent = "Show tree";
+      } else {
+        qr.style.display = "none";
+        tree.style.display = "block";
+        btnText.textContent = "Show QR code";
+      }
+    }
+
+    // Season Switcher for Tree
+    function setSeason(season) {
+      if (isQrShowing) toggleQrView();
+
+      document.querySelectorAll(".interactive-controls .pill-btn").forEach(btn => {
+        if (btn.id !== "btnToggleQR") btn.classList.remove("active");
+      });
+
+      const foliage = document.getElementById("treeFoliage");
+      if (season === 'spring') {
+        document.getElementById("btnSpring").classList.add("active");
+        foliage.innerHTML = `
+          <circle cx="120" cy="75" r="42" fill="#f8b4cb" opacity="0.95" />
+          <circle cx="95" cy="85" r="30" fill="#f69ab8" opacity="0.9" />
+          <circle cx="145" cy="85" r="32" fill="#fca1bf" opacity="0.9" />
+          <circle cx="120" cy="50" r="28" fill="#fed0df" opacity="0.95" />
+          <circle cx="108" cy="68" r="6" fill="#fff" opacity="0.6" />
+          <circle cx="132" cy="78" r="5" fill="#fff" opacity="0.6" />
+          <circle cx="124" cy="92" r="7" fill="#f38ba9" opacity="0.7" />
+          <ellipse cx="142" cy="170" rx="4" ry="2" fill="#f69ab8" />
+          <ellipse cx="98" cy="172" rx="3" ry="1.5" fill="#f69ab8" />
+          <ellipse cx="120" cy="195" rx="5" ry="2" fill="#f8b4cb" />
+          <ellipse cx="160" cy="162" rx="4" ry="2" fill="#fca1bf" />
+        `;
+      } else if (season === 'summer') {
+        document.getElementById("btnSummer").classList.add("active");
+        foliage.innerHTML = `
+          <circle cx="120" cy="75" r="44" fill="#48bb78" opacity="0.95" />
+          <circle cx="95" cy="85" r="32" fill="#38a169" opacity="0.9" />
+          <circle cx="145" cy="85" r="34" fill="#2f855a" opacity="0.9" />
+          <circle cx="120" cy="48" r="30" fill="#68d391" opacity="0.95" />
+          <circle cx="108" cy="65" r="7" fill="#9ae6b4" opacity="0.6" />
+          <circle cx="135" cy="75" r="6" fill="#9ae6b4" opacity="0.6" />
+          <ellipse cx="135" cy="175" rx="4" ry="2" fill="#48bb78" />
+          <ellipse cx="105" cy="180" rx="4" ry="2" fill="#38a169" />
+        `;
+      } else if (season === 'autumn') {
+        document.getElementById("btnAutumn").classList.add("active");
+        foliage.innerHTML = `
+          <circle cx="120" cy="75" r="43" fill="#dd6b20" opacity="0.95" />
+          <circle cx="95" cy="85" r="32" fill="#c05621" opacity="0.9" />
+          <circle cx="145" cy="85" r="33" fill="#ed8936" opacity="0.9" />
+          <circle cx="120" cy="50" r="28" fill="#f6ad55" opacity="0.95" />
+          <circle cx="110" cy="66" r="6" fill="#fbd38d" opacity="0.6" />
+          <circle cx="132" cy="78" r="5" fill="#fbd38d" opacity="0.6" />
+          <ellipse cx="140" cy="172" rx="5" ry="2.5" fill="#c05621" />
+          <ellipse cx="98" cy="175" rx="4" ry="2" fill="#dd6b20" />
+          <ellipse cx="122" cy="192" rx="6" ry="2.5" fill="#ed8936" />
+          <ellipse cx="162" cy="164" rx="5" ry="2" fill="#dd6b20" />
+        `;
+      }
+    }
+
+    // Dynamic Theme Color Palette Swatches
+    function setThemeColor(color, el) {
+      document.documentElement.style.setProperty('--accent-color', color);
+      document.documentElement.style.setProperty('--primary', color);
+      
+      // Calculate light tint
+      document.documentElement.style.setProperty('--accent-light', color + '1a');
+
+      document.querySelectorAll(".color-circle").forEach(c => c.classList.remove("selected"));
+      el.classList.add("selected");
+    }
+
+    // Copy Link with Toast
+    function copyShareLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast("Page link copied to clipboard!");
+      }).catch(() => {
+        showToast("Link: " + window.location.href);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toastMsg").textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2600);
+    }
+    // Dynamic QR update based on current page URL
+    function updateQrCode() {
+      const qrImg = document.getElementById("qrImg");
+      if (!qrImg) return;
+      const currentUrl = (window.location.protocol.startsWith("http")) 
+        ? window.location.href 
+        : "https://vibewave-music.netlify.app/website/";
+      
+      const dynamicQrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&margin=8&data=" + encodeURIComponent(currentUrl);
+      const testImg = new Image();
+      testImg.onload = () => { qrImg.src = dynamicQrUrl; };
+      testImg.src = dynamicQrUrl;
+    }
+    window.addEventListener("DOMContentLoaded", updateQrCode);
+  </script>
+</body>
+</html>
