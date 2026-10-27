@@ -1,4 +1,5 @@
-/downloads/VibeWave-vivo.apk /downloads/VibeWave-standard.apk 302
-/downloads/VibeWave-armv7.apk /downloads/VibeWave-standard.apk 302
+/downloads/VibeWave-standard.apk https://raw.githubusercontent.com/AlokKumarKushwaha/vibewave-website/main/downloads/VibeWave-standard.apk 302!
+/downloads/VibeWave-vivo.apk https://raw.githubusercontent.com/AlokKumarKushwaha/vibewave-website/main/downloads/VibeWave-standard.apk 302!
+/downloads/VibeWave-armv7.apk https://raw.githubusercontent.com/AlokKumarKushwaha/vibewave-website/main/downloads/VibeWave-standard.apk 302!
 /website/*  /:splat  301
 /website  /  301
